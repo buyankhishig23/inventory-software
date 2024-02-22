@@ -1,6 +1,8 @@
 import { CheckCircle2 } from 'lucide-react'
 import React from 'react'
 import Link from 'next/link'
+import SalesActivityCard from './SalesActivityCard'
+import InventorySummaryCard from './InventorySummaryCard'
 export default function SalesOverview() {
   const salesActivity=[
     {
@@ -52,15 +54,7 @@ export default function SalesOverview() {
             {
               salesActivity.map((item,i)=>{
                 return(
-                  <Link href={item.href} key={i} className="shadow rounded-lg border-slate-200 bg-white px-6 py-4 cursor-pointer flex items-center flex-col gap-3 transition-all duration-300 border-2 hover:border-blue-400 ">
-                    <h4 className={`font-semibold text-3xl ${item.color}`}>{item.number}</h4>
-
-                    <small className='text-slate-500'>{item.unit}</small>
-                    <div className="flex items-center space-x-2">
-                      <CheckCircle2 className='w-4 h-4'/>
-                      <span className='uppercase text-xs'>{item.title}</span>
-                    </div>
-                  </Link>
+                 <SalesActivityCard item={item} key={i}/>
                 )
               })
             }
@@ -74,10 +68,7 @@ export default function SalesOverview() {
           {
             invertorySummary.map((item,i)=>{
               return(
-                <div key={i} className="mb-4 shadow rounded-lg border border-slate-200 bg-white py-2 px-4 cursor-pointer flex items-center gap-3 justify-between transition-all duration-300  hover:border-blue-400">
-                <h2 className='text-slate-500 uppercase text-sm'>{item.title}</h2>
-                <h4 className='font-semibold text-2xl'>{item.number}</h4>  
-               </div>
+                <InventorySummaryCard item={item} key={i}/>
               )
             })
           }
