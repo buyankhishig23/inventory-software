@@ -1,10 +1,32 @@
-import { BaggageClaim, BarChart4, Cable, ChevronLeft, Files, HomeIcon, ShoppingBag, ShoppingBasket, ShoppingCart } from 'lucide-react'
+"use client"
+import { BaggageClaim, BarChart4, Cable, ChevronLeft, Files, HomeIcon, PlusCircle, ShoppingBag, ShoppingBasket, ShoppingCart } from 'lucide-react'
 import React from 'react'
 import Link from 'next/link'
 import Home from '@/app/page'
 import SubscriptionCard from './SubscriptionCard'
+import {
+    Collapsible,
+    CollapsibleContent,
+    CollapsibleTrigger,
+  } from "@/components/ui/collapsible"
+import CollapsibleLink from './CollapsibleLink'
+  
 
 export default function Sidebar() {
+  const inventoryLinks =[
+    {
+        title:"Бараа",
+        href:""
+    },
+    {
+        title:"Барааны бүлэг",
+        href:""
+    },
+    {
+        title:"Агуулахын тохиргоо",
+        href:""
+    }
+  ]
   return (
     <div className='w-60 min-h-screen bg-slate-800 text-slate-50  fixed flex flex-col'>
         {/* {Top}   */}
@@ -14,16 +36,27 @@ export default function Sidebar() {
               <ShoppingCart/>
               <span className='text-xl font-semibold'>Бараа бүртгэл</span>
           </Link>
+          
           {/* {Links} */}
           <nav className='flex flex-col gap-3 px-3 py-6'>
               <Link href="#" className="flex items-center space-x-2 bg-blue-600 text-slate-50 p-2 rounded-md" >
                   <HomeIcon className='w-4 h-4'/>
                   <span>Нүүр</span>
               </Link>
-              <button className="flex items-center space-x-2 p-2" >
-                  <BaggageClaim className='w-4 h-4'/>
-                  <span>Агуулах</span>
-              </button>
+            <Collapsible>
+                <CollapsibleTrigger className="flex items-center space-x-2 p-2"><BaggageClaim className='w-4 h-4'/>
+                  <span>Агуулах</span></CollapsibleTrigger>
+                <CollapsibleContent>
+                    {inventoryLinks.map((item,i) => {
+                        return<CollapsibleLink 
+                            key={i} 
+                            href={item.href} 
+                            title={item.title}/>
+                    })     
+                    }
+                </CollapsibleContent>
+            </Collapsible>
+
               <button className="flex items-center space-x-2 p-2" >
                   <ShoppingBasket className='w-4 h-4'/>
                   <span>Борлуулалт</span>
