@@ -11,11 +11,23 @@ export default function Sidebar() {
   const inventoryLinks =[
     {
         title:"Бараа",
-        href:"/dashboard/inventory"
+        href:"/dashboard/inventory/items/new"
     },
     {
         title:"Барааны бүлэг",
-        href:""
+        href:"/dashboard/inventory/categories/new"
+    },
+    {
+        title:"Брэнд",
+        href:"/dashboard/inventory/brands/new"
+    },
+    {
+        title:"Нэгж",
+        href:"/dashboard/inventory/units/new"
+    },
+    {
+        title:"Агуулах",
+        href:"/dashboard/inventory/warehouse/new"
     },
     {
         title:"Агуулахын тохиргоо",
@@ -88,8 +100,6 @@ export default function Sidebar() {
                 title="Борлуулалт"
                 icon={ShoppingBasket}
                />
-
-              
               <button className="flex items-center space-x-2 p-2" >
                   <ShoppingBag className='w-4 h-4'/>
                   <span>Худалдан авалт</span>
