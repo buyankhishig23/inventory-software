@@ -7,18 +7,11 @@ import React from 'react'
 
 export default function Inventory() {
   const optionsCards=[
-    {
-      title:"Барааны бүлэг",
-      description:"Ижил төрлийн бараануудыг багцлах",
-      link:"/new",
-      linkTitle:"Шинэ барааны бүлэг",
-      enabled:true,
-      icon:Boxes,
-    },
+
     {
       title:"Бараа",
       description:"Худалдах болон зарах бараа материалыг үүсгэх",
-      link:"/new",
+      link:"/dashboard/inventory/items/new",
       linkTitle:"Шинэ бараа",
       enabled:true,
       icon:Shirt,
@@ -26,17 +19,33 @@ export default function Inventory() {
     {
       title:"Багц бараа",
       description:"Өөр төрлийг барааг багц болгон худалдах",
-      link:"/new",
-      linkTitle:"Багц бараа",
-      enabled:false,
-      icon:Component,
+      link:"/dashboard/inventory/categories/new",
+      linkTitle:"New  Category",
+      enabled:true,
+      icon:Boxes,
     },
     {
-      title:"Үнийн жагсаалт",
+      title:"Brands",
       description:"Бараа материалын үнийн жагсаалт",
-      link:"/new",
-      linkTitle:"Үнийн жагаалт",
-      enabled:false,
+      link:"/dashboard/inventory/brands/new",
+      linkTitle:"New Brands",
+      enabled:true,
+      icon:ScrollText,
+    },
+    {
+      title:"Warehouse",
+      description:"Бараа материалын үнийн жагсаалт",
+      link:"/dashboard/inventory/warehouse/new",
+      linkTitle:"New Warehouse",
+      enabled:true,
+      icon:ScrollText,
+    },
+    {
+      title:"Units",
+      description:"Бараа материалын үнийн жагсаалт",
+      link:"/dashboard/inventory/units/new",
+      linkTitle:"New Units",
+      enabled:true,
       icon:ScrollText,
     },
   ]

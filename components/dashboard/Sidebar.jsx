@@ -11,23 +11,23 @@ export default function Sidebar() {
   const inventoryLinks =[
     {
         title:"Бараа",
-        href:"/dashboard/inventory/items/new"
+        href:"/dashboard/inventory"
     },
     {
         title:"Барааны бүлэг",
-        href:"/dashboard/inventory/categories/new"
+        href:"/dashboard/inventory"
     },
     {
         title:"Брэнд",
-        href:"/dashboard/inventory/brands/new"
+        href:"/dashboard/inventory"
     },
     {
         title:"Нэгж",
-        href:"/dashboard/inventory/units/new"
+        href:"/dashboard/inventory"
     },
     {
         title:"Агуулах",
-        href:"/dashboard/inventory/warehouse/new"
+        href:"/dashboard/inventory"
     },
     {
         title:"Агуулахын тохиргоо",
