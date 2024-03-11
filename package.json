@@ -2,6 +2,7 @@
   "name": "inventory-software",
   "version": "0.1.0",
   "private": true,
+  
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,6 +11,7 @@
   },
   "dependencies": {
     "@radix-ui/react-collapsible": "^1.0.3",
+    "@uploadthing/react": "^6.3.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "lucide-react": "^0.331.0",
@@ -19,12 +21,16 @@
     "react-hook-form": "^7.51.0",
     "sass": "^1.71.0",
     "tailwind-merge": "^2.2.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "uploadthing": "^6.5.2"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",
+    "@types/node": "20.11.25",
+    "@types/react": "18.2.64",
     "autoprefixer": "^10.4.17",
     "postcss": "^8.4.35",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "typescript": "5.4.2"
   }
 }

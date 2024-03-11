@@ -22,7 +22,7 @@ export default function TextInput({ label, name, register, errors, isRequired = 
           focus:ring-blue-600 sm:text-sm sm:leading-6'
           placeholder='Type the category title'
         />
-        {errors.name && (
+        {errors[`${name}`] && (
               <span className="text-sm text-red-600 ">
                 {label} is required
               </span>

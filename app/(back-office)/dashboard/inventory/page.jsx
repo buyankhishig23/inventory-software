@@ -48,6 +48,14 @@ export default function Inventory() {
       enabled:true,
       icon:ScrollText,
     },
+    {
+      title:"Inventory Adjustment",
+      description:"TransferStock the main warehouse",
+      link:"/dashboard/inventory/adjustments/new",
+      linkTitle:"New Adjustment",
+      enabled:true,
+      icon:ScrollText,
+    },
   ]
   return (
     <div>
