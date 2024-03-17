@@ -75,7 +75,6 @@ export default function NewItem() {
       value:"dasdasd2"
     }
   ]
-
   const {
     register,
     handleSubmit,
